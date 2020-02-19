@@ -1,0 +1,8 @@
+Verified+1: CI Jenkins
+Code-Review+1: Ihor Kalyniak <ihor_kalyniak@epam.com>
+Code-Review+2: Iryna Churkina <iryna_churkina@epam.com>
+Submitted-by: Iryna Churkina <iryna_churkina@epam.com>
+Submitted-at: Wed, 19 Feb 2020 09:16:45 +0000
+Reviewed-on: https://gerrit-oc-green-edp-cicd.delivery.aws.main.edp.projects.epam.com/c/gerrit-operator/+/169
+Project: gerrit-operator
+Branch: refs/heads/master

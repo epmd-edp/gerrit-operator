@@ -1,0 +1,16 @@
+{{- if eq .Values.platform "openshift" -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: gerrit-operator-edp-scc
+  namespace: {{ .Values.namespace }}
+rules:
+  - apiGroups:
+      - security.openshift.io
+    resourceNames:
+      - edp
+    resources:
+      - securitycontextconstraints
+    verbs:
+      - use
+{{- end -}}

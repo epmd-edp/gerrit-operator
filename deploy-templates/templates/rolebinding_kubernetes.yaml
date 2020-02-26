@@ -1,0 +1,14 @@
+{{- if eq .Values.platform "kubernetes" -}}
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: gerrit-operator
+roleRef:
+  kind: ClusterRole
+  apiGroup: rbac.authorization.k8s.io
+  name: edp-deploy-role
+subjects:
+  - kind: ServiceAccount
+    name: gerrit-operator-edp
+    namespace: {{ .Values.namespace }}
+{{- end -}}

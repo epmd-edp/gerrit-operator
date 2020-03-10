@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1dc22a22_ca777a0f",
+        "filename": "pkg/apis/v2/v1alpha1/gerrit_types.go",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000017
+      },
+      "writtenOn": "2020-03-10T17:00:12Z",
+      "side": 1,
+      "message": "omitempty",
+      "range": {
+        "startLine": 27,
+        "startChar": 72,
+        "endLine": 27,
+        "endChar": 76
+      },
+      "revId": "c6dadf8e3bbbf5eeb0f5c08de5988aae01fc9efb",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": false
+    }
+  ]
+}

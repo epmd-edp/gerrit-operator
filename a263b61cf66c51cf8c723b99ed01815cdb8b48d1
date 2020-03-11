@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eab51f2e_f126b32e",
+        "filename": "pkg/service/platform/openshift/openshift.go",
+        "patchSetId": 2
+      },
+      "lineNbr": 348,
+      "author": {
+        "id": 1000003
+      },
+      "writtenOn": "2020-03-11T07:43:12Z",
+      "side": 1,
+      "message": "Can we use default value in case of absence this field for backward compatibility?",
+      "range": {
+        "startLine": 348,
+        "startChar": 24,
+        "endLine": 348,
+        "endChar": 41
+      },
+      "revId": "a263b61cf66c51cf8c723b99ed01815cdb8b48d1",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": false
+    }
+  ]
+}

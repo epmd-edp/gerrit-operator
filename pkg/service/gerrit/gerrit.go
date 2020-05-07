@@ -136,7 +136,7 @@ func (s ComponentService) Configure(instance *v1alpha1.Gerrit) (*v1alpha1.Gerrit
 
 	GerritScriptsPath := platformHelper.LocalScriptsRelativePath
 	if _, err = k8sutil.GetOperatorNamespace(); err != nil && err == k8sutil.ErrNoNamespace {
-		GerritScriptsPath = filepath.FromSlash(fmt.Sprintf("%v/../%v/%v", executableFilePath, platformHelper.LocalConfigsRelativePath, platformHelper.DefaultScriptsDirectory))
+		GerritScriptsPath = filepath.FromSlash(fmt.Sprintf("%v/temp/%v/%v", executableFilePath, platformHelper.LocalConfigsRelativePath, platformHelper.DefaultScriptsDirectory))
 	}
 
 	sshPortService, err := s.GetServicePort(instance)
@@ -213,13 +213,13 @@ func (s ComponentService) Configure(instance *v1alpha1.Gerrit) (*v1alpha1.Gerrit
 			return instance, false, errors.Wrapf(err, "Failed to check credentials in Gerrit")
 		}
 
-		if status == 401 {
+/*		if status == 401 {
 			instance, err := s.gerritClient.InitAdminUser(*instance, s.PlatformService, GerritScriptsPath, podList.Items[0].Name,
 				string(gerritAdminPublicKey))
 			if err != nil {
 				return &instance, false, errors.Wrapf(err, "Failed to initialize Gerrit Admin User")
 			}
-		}
+		}*/
 
 		err := s.setGerritAdminUserPassword(*instance, gerritUrl, gerritAdminPassword, gerritApiUrl, sshPortService)
 		if err != nil {

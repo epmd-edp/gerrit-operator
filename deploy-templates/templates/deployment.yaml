@@ -1,3 +1,4 @@
+{{- if eq .Values.platform "openshift" }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -37,3 +38,4 @@ spec:
               value: "{{ .Values.name }}"
             - name: PLATFORM_TYPE
               value: "{{ .Values.platform }}"
+{{end}}

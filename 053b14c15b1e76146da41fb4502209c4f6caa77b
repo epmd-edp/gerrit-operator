@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5f3b9bbe_b987e025",
+        "filename": "deploy-templates/templates/gerrit/git_server.yaml",
+        "patchSetId": 9
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1000009
+      },
+      "writtenOn": "2020-06-18T13:23:55Z",
+      "side": 1,
+      "message": "Why do we have here a value for a gitServer deploy, when we are deploying specific Gerrit GitServer instance ?",
+      "range": {
+        "startLine": 1,
+        "startChar": 15,
+        "endLine": 1,
+        "endChar": 24
+      },
+      "revId": "053b14c15b1e76146da41fb4502209c4f6caa77b",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": true
+    }
+  ]
+}

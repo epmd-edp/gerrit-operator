@@ -1,6 +1,6 @@
 name: gerrit-operator
-namespace: ""
-platform: "openshift"
+namespace: "skostenko-test"
+platform: "kubernetes"
 image:
   name: epamedp/gerrit-operator
   version: v2.4.0
@@ -9,11 +9,11 @@ gerrit:
   deploy: true
   name: "gerrit"
   image: "openfrontier/gerrit"
-  sshPort: "22"
+  sshPort: "30001"
+  port: "8080"
+  volumeCapacity: 10Gi
+  storageClass: gp2
   version: "3.1.4"
-  admins:
-    - "userOne"
-    - "userTwo"
 
 gitServer:
   name: "gerrit"
@@ -22,3 +22,6 @@ gitServer:
   nameSshKeySecret: "gerrit-ciuser-sshkey"
   sshPort: 22
   dnsWildCard: ""
+
+edp:
+  admins:

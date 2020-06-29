@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/epmd-edp/gerrit-operator/v2/pkg/apis/v2/v1alpha1"
+	"github.com/epmd-edp/gerrit-operator/v2/pkg/controller/helper"
 	"time"
 
 	"github.com/epmd-edp/gerrit-operator/v2/pkg/service/gerrit"
@@ -67,10 +68,12 @@ func Add(mgr manager.Manager) error {
 func newReconciler(mgr manager.Manager) reconcile.Reconciler {
 	scheme := mgr.GetScheme()
 	client := mgr.GetClient()
+	pt := helper.GetPlatformTypeEnv()
+	ps, _ := platform.NewService(pt, scheme)
 	return &ReconcileGerrit{
 		client:  client,
 		scheme:  scheme,
-		service: gerrit.NewComponentService(platform.NewService(scheme), client, scheme),
+		service: gerrit.NewComponentService(ps, client, scheme),
 	}
 }
 
@@ -148,12 +151,12 @@ func (r *ReconcileGerrit) Reconcile(request reconcile.Request) (reconcile.Result
 		return reconcile.Result{RequeueAfter: 10 * time.Second}, nil
 	}
 
-	if dcIsReady, err := r.service.IsDeploymentConfigReady(*instance); err != nil {
-		msg := fmt.Sprintf("Failed to check Deployment config for %v/%v object!", instance.Namespace, instance.Name)
+	if dcIsReady, err := r.service.IsDeploymentReady(*instance); err != nil {
+		msg := fmt.Sprintf("Failed to check Deployment for %v/%v object!", instance.Namespace, instance.Name)
 		reqLogger.Info(msg)
 		return reconcile.Result{RequeueAfter: 10 * time.Second}, nil
 	} else if !dcIsReady {
-		reqLogger.Info(fmt.Sprintf("Deployment config for %v/%v object is not ready for configuration yet", instance.Namespace, instance.Name))
+		reqLogger.Info(fmt.Sprintf("Deployment for %v/%v object is not ready for configuration yet", instance.Namespace, instance.Name))
 		return reconcile.Result{RequeueAfter: 30 * time.Second}, nil
 	}
 
@@ -178,7 +181,7 @@ func (r *ReconcileGerrit) Reconcile(request reconcile.Request) (reconcile.Result
 		return reconcile.Result{RequeueAfter: 10 * time.Second}, nil
 	}
 
-	if dcIsReady, err := r.service.IsDeploymentConfigReady(*instance); err != nil {
+	if dcIsReady, err := r.service.IsDeploymentReady(*instance); err != nil {
 		reqLogger.Info(fmt.Sprintf("Failed to check Deployment config for %v/%v Gerrit!", instance.Namespace, instance.Name))
 		return reconcile.Result{RequeueAfter: 10 * time.Second}, err
 	} else if !dcIsReady {

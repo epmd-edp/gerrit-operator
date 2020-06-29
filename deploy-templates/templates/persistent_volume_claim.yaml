@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+    name: {{ .Values.gerrit.name }}-data
+    labels:
+        app: {{ .Values.gerrit.name }}
+spec:
+    accessModes:
+        - ReadWriteOnce
+    resources:
+        requests:
+            storage: {{ .Values.gerrit.volumeCapacity }}
+    storageClassName: {{ .Values.gerrit.storageClass }}
+    volumeMode: Filesystem

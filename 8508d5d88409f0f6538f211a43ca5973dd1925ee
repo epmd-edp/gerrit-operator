@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "27ea2832_09f4ceb3",
+        "filename": "deploy-templates/templates/rolebinding_openshift.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1000007
+      },
+      "writtenOn": "2020-07-09T13:45:43Z",
+      "side": 1,
+      "message": "Remove this plaese",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 7,
+        "endChar": 60
+      },
+      "revId": "8508d5d88409f0f6538f211a43ca5973dd1925ee",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": true
+    }
+  ]
+}

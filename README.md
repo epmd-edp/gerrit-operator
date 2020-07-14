@@ -1,8 +1,10 @@
-# How to Install Operator
+# Gerrit-operator
 
-EDP installation can be applied on two container orchestration platforms: OpenShift and Kubernetes.
+## Overview
 
-_**NOTE:** Installation of operators is platform-independent, that is why there is a unified instruction for deploying._
+Gerrit-operator is an EDP operator that is responsible for installing and configuring Gerrit. Operator installation can be applied on Openshift container orchestration platform.
+
+_**NOTE:** Operator is platform-independent, that is why there is an unified instruction for deploying._
 
 ## Prerequisites
 1. Linux machine or Windows Subsystem for Linux instance with [Helm 3](https://helm.sh/docs/intro/install/) installed;
@@ -27,10 +29,11 @@ In order to install the EDP Gerrit-operator, follow the steps below:
      ```
 
     _**NOTE:** It is highly recommended to use the latest released version._
+    
 3. Deploy operator:
 
-Full available chart parameters list:
-```
+    Full available chart parameters list:
+    ```
     - <chart_version>                        # Helm chart version;
     - global.edpName                         # a namespace or a project name (in case of OpenShift);
     - global.platform                        # a platform type that can be "kubernetes" or "openshift";
@@ -48,11 +51,10 @@ Full available chart parameters list:
     - gerrit.storage.size                    # Size for Gerrit data volume;
 ```
 
-_**NOTE:** Follow instruction to create namespace [edp-install-openshift](https://github.com/epmd-edp/edp-install/blob/master/documentation/openshift_install_edp.md#install-edp) or [edp-install-kubernetes](https://github.com/epmd-edp/edp-install/blob/master/documentation/kubernetes_install_edp.md#install-edp)._
+Install operator in the <edp_cicd_project> namespace with helm command. Bellow is the installation command example:
 
-Inspect the sample of launching a Helm template for Nexus operator installation:
 ```bash
-helm install gerrit-operator epamedp/gerrit-operator --version <chart_version> --namespace <edp_cicd_project> --set name=gerrit-operator --set global.edpName=<edp_cicd_project> --set global.platform
+helm install gerrit-operator epamedp/gerrit-operator --version <chart_version> --namespace <edp_cicd_project> --set name=gerrit-operator --set global.edpName=<edp_cicd_project> --set global.platform=<platform_type>
 ```
 
 * Check the <edp_cicd_project> namespace that should contain Deployment with your operator in a running status

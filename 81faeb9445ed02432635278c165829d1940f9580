@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce5413f3_c7d66f7e",
+        "filename": "pkg/service/platform/openshift/openshift.go",
+        "patchSetId": 7
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2020-08-28T07:23:15Z",
+      "side": 1,
+      "message": "separate to different methods",
+      "revId": "81faeb9445ed02432635278c165829d1940f9580",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e5674d54_d4b290d1",
+        "filename": "pkg/service/platform/openshift/openshift.go",
+        "patchSetId": 7
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 1000005
+      },
+      "writtenOn": "2020-08-28T07:23:15Z",
+      "side": 1,
+      "message": "just use return dc.Status.UpdatedReplicas \u003d\u003d 1 \u0026\u0026 dc.Status.AvailableReplicas \u003d\u003d 1, nil",
+      "revId": "81faeb9445ed02432635278c165829d1940f9580",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": true
+    }
+  ]
+}

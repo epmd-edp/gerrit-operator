@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0c6b05e5_4b6b67d4",
+        "filename": "pkg/service/platform/openshift/openshift.go",
+        "patchSetId": 7
+      },
+      "lineNbr": 208,
+      "author": {
+        "id": 1000017
+      },
+      "writtenOn": "2020-09-09T12:09:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ce5413f3_c7d66f7e",
+      "revId": "81faeb9445ed02432635278c165829d1940f9580",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e5674d54_d4b290d1",
         "filename": "pkg/service/platform/openshift/openshift.go",
         "patchSetId": 7
@@ -33,6 +51,24 @@
       "revId": "81faeb9445ed02432635278c165829d1940f9580",
       "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c6c4fb6a_11387c0c",
+        "filename": "pkg/service/platform/openshift/openshift.go",
+        "patchSetId": 7
+      },
+      "lineNbr": 234,
+      "author": {
+        "id": 1000017
+      },
+      "writtenOn": "2020-09-09T12:09:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e5674d54_d4b290d1",
+      "revId": "81faeb9445ed02432635278c165829d1940f9580",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": false
     }
   ]
 }

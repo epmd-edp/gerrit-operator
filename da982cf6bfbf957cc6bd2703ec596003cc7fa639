@@ -1,0 +1,7 @@
+Verified+1: CI Jenkins
+Code-Review+2: Stanislav Kostenko <stanislav_kostenko@epam.com>
+Submitted-by: Stanislav Kostenko <stanislav_kostenko@epam.com>
+Submitted-at: Thu, 10 Sep 2020 15:39:03 +0000
+Reviewed-on: https://gerrit-oc-green-edp-cicd.delivery.aws.main.edp.projects.epam.com/c/gerrit-operator/+/4793
+Project: gerrit-operator
+Branch: refs/heads/test-k8s

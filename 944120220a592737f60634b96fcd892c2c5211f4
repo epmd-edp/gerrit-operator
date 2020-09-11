@@ -1,0 +1,96 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b7ec8dd4_08c7a095",
+        "filename": "deploy-templates/templates/gerrit_deployment/gerrit_deployment_config_openshift.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1000007
+      },
+      "writtenOn": "2020-09-11T03:55:28Z",
+      "side": 1,
+      "message": "This should not be hardcoded. Please revert",
+      "range": {
+        "startLine": 35,
+        "startChar": 97,
+        "endLine": 35,
+        "endChar": 104
+      },
+      "revId": "944120220a592737f60634b96fcd892c2c5211f4",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "460064e1_c4aa5a9a",
+        "filename": "deploy-templates/values.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1000007
+      },
+      "writtenOn": "2020-09-11T03:55:28Z",
+      "side": 1,
+      "message": "Leave this blank",
+      "range": {
+        "startLine": 2,
+        "startChar": 12,
+        "endLine": 2,
+        "endChar": 26
+      },
+      "revId": "944120220a592737f60634b96fcd892c2c5211f4",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9ab49d2d_36ab7461",
+        "filename": "deploy-templates/values.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1000007
+      },
+      "writtenOn": "2020-09-11T03:55:28Z",
+      "side": 1,
+      "message": "Looks like a typo",
+      "range": {
+        "startLine": 11,
+        "startChar": 11,
+        "endLine": 11,
+        "endChar": 12
+      },
+      "revId": "944120220a592737f60634b96fcd892c2c5211f4",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e8186d3c_18f9afdf",
+        "filename": "deploy-templates/values.yaml",
+        "patchSetId": 12
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1000007
+      },
+      "writtenOn": "2020-09-11T03:55:28Z",
+      "side": 1,
+      "message": "Must be 22",
+      "range": {
+        "startLine": 17,
+        "startChar": 12,
+        "endLine": 17,
+        "endChar": 17
+      },
+      "revId": "944120220a592737f60634b96fcd892c2c5211f4",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": true
+    }
+  ]
+}

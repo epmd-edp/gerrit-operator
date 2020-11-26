@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "55b70760_13a15e3e",
+        "filename": "README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1000020
+      },
+      "writtenOn": "2020-11-26T13:59:42Z",
+      "side": 1,
+      "message": ";SSH port, to be exposed as NodePort in cluster",
+      "revId": "54e007ff4a5f59acbc7de82ff2155196f1854920",
+      "serverId": "0350cb7f-c1b1-4710-a647-f6632dbafb3c",
+      "unresolved": true
+    }
+  ]
+}
